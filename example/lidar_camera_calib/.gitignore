@@ -1,0 +1,21 @@
+.idea
+.vscode
+/vs_build
+/cmake-build-*
+/build
+/datasets
+/output
+
+# claude md
+CLAUDE*.md
+.claude
+
+# spec workflow
+.spec-workflow
+
+# spec-kit
+.specify
+/specs
+
+# codex
+AGENTS*.md

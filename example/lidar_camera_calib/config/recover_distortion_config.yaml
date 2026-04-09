@@ -1,0 +1,23 @@
+# Configuration file for recover_distortion tool
+camera_parameters:
+  # Path to the YAML file containing the original camera's intrinsic and distortion parameters
+  yaml_file_path: "/home/gyw/dataset/seer/11_26/cam_calib/YUYV_2_YUYV/camera3/camera3_camera_calib.yaml"
+  model_type: "equidistant"  # 相机模型类型: equidistant, pinhole, fov, etc.
+
+processing_mode: "undistort"  # "undistort" 或 "distort"，决定处理模式
+
+input_output:
+  # 处理模式为 "distort" 时：包含去畸变图像的输入文件夹
+  # 处理模式为 "undistort" 时：包含原始畸变图像的输入文件夹
+  input_folder: "/home/gyw/new"
+
+  # 输出文件夹，用于保存处理后的图像
+  output_folder: "/home/gyw/new2"
+
+# 仅在去畸变(undistort)模式下使用，去畸变后图像的内参参数
+undistort_params:
+  fx: -1.0  # 新图像的焦距 (像素)，-1表示使用原始相机内参
+  fy: -1.0
+  cx: -1.0  # 新图像的主点x坐标，-1表示使用原始相机内参
+  cy: -1.0  # 新图像的主点y坐标
+  # rectification_matrix: [1,0,0, 0,1,0, 0,0,1]  # 可选：校正旋转矩阵，3x3矩阵以行优先顺序存储

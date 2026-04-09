@@ -1,0 +1,23 @@
+# 忽略 C++ 编译生成的二进制文件和中间件
+build/
+bin/
+lib/
+*.o
+*.a
+*.so
+
+# 忽略临时数据和日志
+.cache/
+logs/
+*.log
+
+# 忽略 IDE 和系统产生的杂项文件
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.user
+
+# 忽略输出结果目录（保持仓库整洁）
+output/*
+!output/.gitkeep
