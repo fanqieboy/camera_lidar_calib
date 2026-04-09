@@ -21,3 +21,6 @@ logs/
 # 忽略输出结果目录（保持仓库整洁）
 output/*
 !output/.gitkeep
+
+# 忽略原始代码示例目录
+example/
